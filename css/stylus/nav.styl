@@ -1,0 +1,54 @@
+nav, footer
+  width 100%
+  clear both
+  display inline-block
+
+  ul, li
+    padding 0
+    display inline-block
+    list-style-type none
+
+    li
+      cursor pointer
+      list-style-type none
+      color $red
+      width auto
+
+nav
+  padding 1em 2em
+
+  .logo
+    margin .5em
+    float left
+    cursor pointer
+
+  ul
+    float right
+
+    li
+      display block
+      float left
+      padding 0 1em .7em 1em
+      border-bottom .2em solid transparent
+
+      &:hover
+        border-bottom-color $red
+
+footer
+  ul
+    padding 1em 2em
+    margin auto
+    display block
+
+  p, ul
+      float none
+      text-align center
+
+      li
+        width initial
+        padding .4em 0
+        display block
+
+  p
+    padding .4em 0
+    margin 0
