@@ -2,6 +2,7 @@ nav, footer
   width 100%
   clear both
   display inline-block
+  font-size .8em
 
   ul, li
     padding 0
@@ -15,6 +16,8 @@ nav, footer
       width auto
 
 nav
+  position absolute
+  top 0
   padding 1em 2em
 
   .logo
@@ -22,13 +25,20 @@ nav
     float left
     cursor pointer
 
+    li
+      img
+        width 200px
+
   ul
     float right
+    margin-bottom 0
 
     li
+      color white
+      font-weight 400
       display block
       float left
-      padding 0 1em .7em 1em
+      padding .5em 1em
       border-bottom .2em solid transparent
 
       &:hover
@@ -46,9 +56,12 @@ footer
 
       li
         width initial
-        padding .4em 0
+        padding .2em 0
         display block
 
+        &:hover
+          color $hover
+
   p
-    padding .4em 0
+    padding .1em 0
     margin 0
