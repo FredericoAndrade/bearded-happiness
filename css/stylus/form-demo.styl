@@ -13,6 +13,14 @@ form.demo-form
     input
       input()
 
+      &.first-name,&.last-name
+        width 50%
+        float left
+        border-top none
+
+      &.last-name
+        border-left 2px solid lighten($light-blue, 60%)
+
   .submit
     width 100%
 
@@ -27,4 +35,4 @@ form.demo-form
 
       &:hover
         cursor pointer
-        background $red
+        background #F26379
