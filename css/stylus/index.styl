@@ -1,58 +1,13 @@
-.background
+.container
+  float left
   width 100%
-  max-height 750px
-  overflow hidden
-
-  img
-    width 100%
-
-  section
-    width 100%
-    position absolute
-    top 100px
-
-    h1, h2
-      color white
-
-    form.demo-form
-      float right
-      width 350px
-
-      input
-        font-size 1em
-        padding 1em
-        border none
-        border-bottom 1px solid lighten($blue, 40%)
-        outline none
-
-      .fields
-        input
-          width 100%
-          border-radius .2em
-          margin 0 0 .2em 0
-
-          &:focus
-            background lighten($blue, 97%)
-
-          &:last-of-type
-            margin 0
-
-      .submit
-        width 100%
-
-        input
-          margin-top 1em
-          border-radius .2em
-
-          padding 1em
-          background white
-          width 100%
-
 .content
   h1
     text-align center
 
   section.social-proof
+    margin 3em 0
+
     ul
       display inline-block
       padding 0
@@ -120,3 +75,37 @@
           display block
           width 100%
           text-align center
+
+          img
+            height 30px
+            opacity .4
+
+          &:hover
+            img
+              opacity 1
+
+section.features
+  margin-top 2em
+  display inline-block
+  width 100%
+  background $light-blue
+
+  h1
+    white-text()
+    margin 1em auto
+
+  h1, ul
+    width 960px
+
+  ul
+    margin auto
+    list-style-type none
+    padding-bottom 3em
+
+    li
+      width 100%
+      padding 1em
+      // height 400px
+
+      // &:nth-of-type(even)
+      //   text-align right

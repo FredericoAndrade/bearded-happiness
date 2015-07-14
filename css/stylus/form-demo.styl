@@ -1,0 +1,45 @@
+form.demo-form
+  width 28%
+  float right
+  position relative
+
+  p
+    text-align center
+    margin-left 0
+    padding 1.2em
+    font-weight 300
+
+  input
+    font-size 1em
+    padding 1em
+    border none
+    outline none
+    background lighten($blue, 98%)
+
+  .fields
+    input
+      width 100%
+      border-radius 0
+      margin 0 0 .5px 0
+      padding 1.3em
+      border-bottom 1px solid lighten($blue, 96%)
+
+      &:hover
+        background lighten($blue, 99%)
+
+      &:focus
+        background #fff
+
+      &:last-of-type
+        margin 0
+
+  .submit
+    width 100%
+
+    input
+      float left
+      padding 1.2em
+      background $red
+      width 100%
+      color white
+      font-size 1.3em

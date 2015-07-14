@@ -1,11 +1,17 @@
-<form action="#" method="post" class="demo-form">
+{{!-- <form action="#" method="post" class="demo-form"> --}}
+  {{!-- <p>Sign up for a demo today!</p> --}}
   <div class="fields">
-    <input type="text" name="first-name" id="first-name" value="First Name" tabindex="1" />
-    <input type="text" name="last-name" id="last-name" value="Last Name" tabindex="2" />
-    <input type="text" name="organization" id="organization" value="Organization" tabindex="3" />
-    <input type="text" name="email" id="email" value="Email" tabindex="4" />
+    {{input type="text" name="first-name" class="first-name" value="First Name" tabindex="1"}}
+    {{input type="text" name="last-name" class="last-name" value="Last Name" tabindex="2"}}
+    {{input type="text" name="organization" class="organization" value="Organization" tabindex="3"}}
+    {{input type="text" name="email" class="email" value="Email" tabindex="4"}}
+    {{!-- {{input type="text" name="phone" id="phone" value="Phone" tabindex="5"}} --}}
+    {{!-- <input type="text" name="first-name" id="first-name" value="First Name..." tabindex="1" />
+    <input type="text" name="last-name" id="last-name" value="Last Name..." tabindex="2" />
+    <input type="text" name="organization" id="organization" value="Organization..." tabindex="3" />
+    <input type="text" name="email" id="email" value="Email..." tabindex="4" /> --}}
   </div>
   <div class="submit">
-    <input type="submit" value="Request free demo" />
+    <input type="submit" value="Request a free demo" />
   </div>
-</form>
+{{!-- </form> --}}

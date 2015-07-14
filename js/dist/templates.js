@@ -1,4 +1,122 @@
-Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  
+  data.buffer.push("Privacy Policy");
+  }
+
+function program3(depth0,data) {
+  
+  
+  data.buffer.push("Terms of Service");
+  }
+
+  data.buffer.push(escapeExpression((helper = helpers['top-nav'] || (depth0 && depth0['top-nav']),options={hash:{
+    'tagName': ("nav")
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "top-nav", options))));
+  data.buffer.push("\n<div class=\"container\">\n  ");
+  stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n</div>\n<footer>\n  <ul class=\"footerNav\">\n    ");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
+    'tagName': ("li")
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "privacy", options) : helperMissing.call(depth0, "link-to", "privacy", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n    ");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
+    'tagName': ("li")
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "terms", options) : helperMissing.call(depth0, "link-to", "terms", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n    <p>© Amicus 2015</p>\n  </ul>\n</footer>");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["careers"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '';
+
+
+  data.buffer.push("<div class=\"background careers\">\n  <h1>We're Hiring!</h1>\n</div>\n<div class=\"careers\">\n  <section>\n    <h2>Why Amicus?</h2>\n    <p>Amicus is reshaping civil society. We believe profits and social good can go hand in hand. At Amicus, you can work for a fast growing startup that's disrupting a really large market and feel great about what you do. Nonprofits in the U.S. currently spend $60 billion annually to raise $300 billion — 20 cents on the dollar! We build tools that increase the amount nonprofits raise, while drastically decreasing their costs. Amicus puts more money in the hands of great organizations and creates lots of value in the process. Tired of deciding whether to do good or do well? You've come to the right place.</p>\n    <p>Oh, and we're based in New York City*, the Rome of our time.</p>\n    <p>*Not based in NYC? Amicus can fix that.</p>\n  </section>\n\n  <section class=\"investors\">\n    <h2>Our Investors</h2>\n    <p>Amicus is backed by an amazing group of investors:</p>\n    <ul>\n      <li>Y Combinator</li>\n      <li>Founders Fund</li>\n      <li>Omidyar Network</li>\n      <li>RRE Ventures</li>\n      <li>IA Ventures</li>\n      <li>Quotidian Ventures</li>\n      <li>500 Startups</li>\n      <li>NYC Seed</li>\n      <li>High Peaks Venture Partners</li>\n      <li>Alexis Ohanian</li>\n      <li>Esther Dyson</li>\n      <li>Garry Tan</li>\n    </ul>\n  </section>\n\n  <section class=\"openings\">\n    <h1>Amicus is hiring</h1>\n    <div>\n      <h2>Senior Developer</h2>\n      <p>About You</p>\n      <ul>\n        <li>You’re a product-centric developer</li>\n        <li>You feel a sense of responsibility over the products you build</li>\n        <li>You take initiative and are comfortable working in uncertainty</li>\n      </ul>\n      <p>Required Skills</p>\n      <ul>\n        <li>Expertise in Rails, Javascript, MongoDB</li>\n        <li>Strong knowledge of AWS ecosystem</li>\n        <li>Proven ability to jump into a new project without much guidance</li>\n      </ul>\n      <p>Required Experience</p>\n      <ul>\n        <li>Experience running multi threaded Rails applications</li>\n        <li>Experience developing and deploying SOA apps</li>\n      </ul>\n    </div>\n  </section>\n\n  <section>\n    <h2>Apply</h2>\n    <p>Your info (all fields required)</p>\n    <form action=\"\">\n      <input type=\"text\" placeholder=\"Name (First and last)\">\n      <input type=\"text\" placeholder=\"Current job\">\n      <input type=\"text\" placeholder=\"Email\">\n      <input type=\"text\" placeholder=\"Phone number\">\n      <input type=\"text\" placeholder=\"Github or LinkedIn\">\n    </form>\n    <label for=\"description\">Why are you the right candidate?<textarea name=\"\" id=\"description\" cols=\"30\" rows=\"10\"></textarea></label>\n    <button>Submit</button>\n  </section>\n</div>");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["components/address-component"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("  <p>\n    Amicus FTW, Inc. <br>\n    16 West 22nd Street, 6th Floor <br>\n    New York, NY 10010 <br>\n    <a href=\"#\">help@amicushq.com</a>\n  </p>");
+  
+});
+
+Ember.TEMPLATES["components/demo-form-component"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("\n  \n  <div class=\"fields\">\n    ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'name': ("first-name"),
+    'class': ("first-name"),
+    'value': ("First Name"),
+    'tabindex': ("1")
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n    ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'name': ("last-name"),
+    'class': ("last-name"),
+    'value': ("Last Name"),
+    'tabindex': ("2")
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n    ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'name': ("organization"),
+    'class': ("organization"),
+    'value': ("Organization"),
+    'tabindex': ("3")
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n    ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'name': ("email"),
+    'class': ("email"),
+    'value': ("Email"),
+    'tabindex': ("4")
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n    \n    \n  </div>\n  <div class=\"submit\">\n    <input type=\"submit\" value=\"Request a free demo\" />\n  </div>\n");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["components/social-proof-component"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<h1>Leading organizations rely on Amicus.</h1>\n<ul>\n  <li class=\"source\">\n    <div class=\"logo\">\n      <img alt=\"Afl_logo\" src=\"https://amicus-assets-homepage.s3.amazonaws.com/assets/afl_logo-116924e9c01e8531ae5119fd5f4db442.png\">\n    </div>\n    <div class=\"person\">\n      <p class=\"name\">Nicole Aro</p>\n      <p class=\"title\">Director, Digital Strategies</p>\n    </div>\n    <p class=\"quote\">\"Amicus' friend-to-friend connections enhance our traditional outreach program and make it easier to mobilize our supporters online.\"</p>\n  </li>\n  <li class=\"source\">\n    <div class=\"logo\">\n      <img alt=\"Hrc_logo\" src=\"https://amicus-assets-homepage.s3.amazonaws.com/assets/hrc_logo-cbb6feb225d6880632bb479a3fc1bdbd.png\">\n    </div>\n    <div class=\"person\">\n      <p class=\"name\">Lindsey Twombly</p>\n      <p class=\"title\">Social Media and Online Mobilization</p>\n    </div>\n    <p class=\"quote\">\"We all know the most powerful ask is a friend asking a friend to support a cause they believe in. Amicus makes this possible at scale.\"</p>\n  </li>\n  <li class=\"source\">\n    <div class=\"logo\">\n      <img alt=\"Nea_logo\" src=\"https://amicus-assets-homepage.s3.amazonaws.com/assets/nea_logo-8a188bee919a3a0774175bd5055d425c.png\">\n    </div>\n    <div class=\"person\">\n      <p class=\"name\">Kristofer Garcia</p>\n      <p class=\"title\">Senior Campaign Specialist</p>\n    </div>\n    <p class=\"quote\">\"Amicus' game elements helped us boost volunteer productivity by making outreach fun and easy.\"</p>\n  </li>\n</ul>");
+  
+});
+
+Ember.TEMPLATES["components/top-nav"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
@@ -6,7 +124,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n      <img src=\"img/logo-white.png\" alt=\"Amicus\">\n    ");
+  data.buffer.push("\n    <img src=\"img/logo-blue.png\" alt=\"Amicus\">\n  ");
   }
 
 function program3(depth0,data) {
@@ -18,113 +136,70 @@ function program3(depth0,data) {
 function program5(depth0,data) {
   
   
-  data.buffer.push("Amicus Post");
-  }
-
-function program7(depth0,data) {
-  
-  
   data.buffer.push("Careers");
   }
 
-function program9(depth0,data) {
-  
-  
-  data.buffer.push("Privacy Policy");
-  }
-
-function program11(depth0,data) {
-  
-  
-  data.buffer.push("Terms of Service");
-  }
-
-  data.buffer.push("<nav>\n  <div class=\"logo\">\n    ");
+  data.buffer.push("<div class=\"logo\">\n  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </div>\n  <ul class=\"top-nav\">\n    ");
+  data.buffer.push("\n</div>\n<ul class=\"top-nav\">\n  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "features", options) : helperMissing.call(depth0, "link-to", "features", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
+  data.buffer.push("\n  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "post", options) : helperMissing.call(depth0, "link-to", "post", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "careers", options) : helperMissing.call(depth0, "link-to", "careers", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'tagName': ("li")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "careers", options) : helperMissing.call(depth0, "link-to", "careers", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </ul>\n</nav>\n\n<div class=\"container\">\n  ");
-  stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n</div>\n\n<footer>\n  <ul class=\"footerNav\">\n    ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'tagName': ("li")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "privacy", options) : helperMissing.call(depth0, "link-to", "privacy", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'tagName': ("li")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "terms", options) : helperMissing.call(depth0, "link-to", "terms", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <p>© Amicus 2015</p>\n  </ul>\n</footer>");
+  data.buffer.push("\n</ul>\n");
   return buffer;
   
 });
 
-Ember.TEMPLATES["components/address-component"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["features"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+  var buffer = '';
 
 
-  data.buffer.push("  <p>\n    Amicus FTW, Inc. <br>\n    16 West 22nd Street, 6th Floor <br>\n    New York, NY 10010 <br>\n    <a href=\"#\">help@amicushq.com</a>\n  </p>");
-  
-});
-
-Ember.TEMPLATES["components/demo-form-component"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
-
-
-  data.buffer.push("<form action=\"#\" method=\"post\" class=\"demo-form\">\n  <div class=\"fields\">\n    <input type=\"text\" name=\"first-name\" id=\"first-name\" value=\"First Name\" tabindex=\"1\" />\n    <input type=\"text\" name=\"last-name\" id=\"last-name\" value=\"Last Name\" tabindex=\"2\" />\n    <input type=\"text\" name=\"organization\" id=\"organization\" value=\"Organization\" tabindex=\"3\" />\n    <input type=\"text\" name=\"email\" id=\"email\" value=\"Email\" tabindex=\"4\" />\n  </div>\n  <div class=\"submit\">\n    <input type=\"submit\" value=\"Request free demo\" />\n  </div>\n</form>");
-  
-});
-
-Ember.TEMPLATES["components/social-proof-component"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
-
-
-  data.buffer.push("<section class=\"social-proof\">\n  <h1>Leading organizations rely on Amicus.</h1>\n  <ul>\n    <li class=\"source\">\n      <div class=\"logo\">\n        <img alt=\"Afl_logo\" src=\"https://amicus-assets-homepage.s3.amazonaws.com/assets/afl_logo-116924e9c01e8531ae5119fd5f4db442.png\">\n      </div>\n      <div class=\"person\">\n        <p class=\"name\">Nicole Aro</p>\n        <p class=\"title\">Director, Digital Strategies</p>\n      </div>\n      <p class=\"quote\">\"Amicus' friend-to-friend connections enhance our traditional outreach program and make it easier to mobilize our supporters online.\"</p>\n    </li>\n    <li class=\"source\">\n      <div class=\"logo\">\n        <img alt=\"Hrc_logo\" src=\"https://amicus-assets-homepage.s3.amazonaws.com/assets/hrc_logo-cbb6feb225d6880632bb479a3fc1bdbd.png\">\n      </div>\n      <div class=\"person\">\n        <p class=\"name\">Lindsey Twombly</p>\n        <p class=\"title\">Social Media and Online Mobilization</p>\n      </div>\n      <p class=\"quote\">\"We all know the most powerful ask is a friend asking a friend to support a cause they believe in. Amicus makes this possible at scale.\"</p>\n    </li>\n    <li class=\"source\">\n      <div class=\"logo\">\n        <img alt=\"Nea_logo\" src=\"https://amicus-assets-homepage.s3.amazonaws.com/assets/nea_logo-8a188bee919a3a0774175bd5055d425c.png\">\n      </div>\n      <div class=\"person\">\n        <p class=\"name\">Kristofer Garcia</p>\n        <p class=\"title\">Senior Campaign Specialist</p>\n      </div>\n      <p class=\"quote\">\"Amicus' game elements helped us boost volunteer productivity by making outreach fun and easy.\"</p>\n    </li>\n  </ul>\n</section>");
-  
-});
-
-Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1;
-
-
-  data.buffer.push("<div class=\"background\">\n  <img src=\"img/3.jpg\" alt=\"placeholder+image\">\n  <section>\n    <div class=\"content\">\n      <h1>More donors. More members. More votes.</h1>\n      <h2>Turn your supporters into fundraisers and advocates.</h2>\n      ");
-  stack1 = helpers._triageMustache.call(depth0, "demo-form-component", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    </div>\n  </section>\n</div>\n\n<div class=\"content\">\n\n\n  ");
-  stack1 = helpers._triageMustache.call(depth0, "social-proof-component", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n\n  <section class=\"press\">\n    <h1>In the news</h1>\n    <ul>\n      <li class=\"bloomberg\"><a href=\"http://www.bloomberg.com/video/democratizing-democracy-shaping-the-election-p20TadhfR5KF18huJT15fQ.html\">Bloomberg TV</a></li>\n      <li class=\"cnn\"><a href=\"http://money.cnn.com/2012/08/28/technology/startups/facebook-house/index.html\">CNN</a></li>\n      <li class=\"atlantic\"><a href=\"http://www.theatlantic.com/politics/archive/2012/11/my-best-friend-is-gay-where-social-networks-meets-same-sex-marriage/265793/#\">the Atlantic</a></li>\n      <li class=\"economist\"><a href=\"http://www.economist.com/news/business/21567403-techniques-presidents-election-campaigns-have-spawned-one-lot-young-firms-obama\">The Economist</a></li>\n      <li class=\"tc\"><a href=\"http://techcrunch.com/2012/11/13/amicus/\">TechCrunch</a></li>\n      <li class=\"abc\"><a href=\"http://abclocal.go.com/kgo/story?section=news/technology&amp;id=8790249\">abc NEWS</a></li>\n      <li class=\"buzzfeed\"><a href=\"http://www.buzzfeed.com/rebeccaelliott/7-under-the-hood-technologies-that-are-transformin\">Buzzfeed</a></li>\n    </ul>\n</section>\n</div>");
+  data.buffer.push("\n\n<div class=\"features\">\n\n  <section>\n    <ul>\n      <li>One-click calls for intuitive, simple use</li>\n      <li>VoIP supported, </li>\n      <li>Distributed call centers</li>\n      <li>Dynamic call scripts</li>\n      <li>Full, easy campaign analytics</li>\n      <li>Whitelabeling? Fully branded for your organization</li>\n      <li>Gamified to recognize top volunteers</li>\n    </ul>\n\n  </section>\n</div>");
   return buffer;
   
 });
 
-Ember.TEMPLATES["privacy"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div class=\"banner\">\n  <img src=\"img/2b.jpg\" alt=\"\">\n  <section>\n    <div class=\"content\">\n      <h1>The World's Best Peer to Peer Call Tool.</h1>\n      <h2>Powering People Power</h2>\n    </div>\n  </section>\n  ");
+  data.buffer.push(escapeExpression((helper = helpers['demo-form-component'] || (depth0 && depth0['demo-form-component']),options={hash:{
+    'tagName': ("form"),
+    'classNames': ("demo-form")
+  },hashTypes:{'tagName': "STRING",'classNames': "STRING"},hashContexts:{'tagName': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "demo-form-component", options))));
+  data.buffer.push("\n</div>\n\n<div class=\"content\">\n  ");
+  data.buffer.push(escapeExpression((helper = helpers['social-proof-component'] || (depth0 && depth0['social-proof-component']),options={hash:{
+    'tagName': ("section"),
+    'classNames': ("social-proof")
+  },hashTypes:{'tagName': "STRING",'classNames': "STRING"},hashContexts:{'tagName': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "social-proof-component", options))));
+  data.buffer.push("\n</div>\n\n  <section class=\"features\">\n    <h1>Main Features</h1>\n    <ul>\n      <li>One-click calls for intuitive, simple use</li>\n      <li>Distributed call centers</li>\n      <li>Fully branded for your organization</li>\n      <li>Gamified to recognize top volunteers</li>\n    </ul>\n  </section>\n\n<div class=\"content\">\n  \n  <section class=\"press\">\n    <h1>In the news</h1>\n    <ul>\n      <li class=\"bloomberg\"><a href=\"http://www.bloomberg.com/video/democratizing-democracy-shaping-the-election-p20TadhfR5KF18huJT15fQ.html\"><img src=\"img/press/Dark/Bloomberg.png\" alt=\"Bloomberg TV\"></a></li>\n      <li class=\"cnn\"><a href=\"http://money.cnn.com/2012/08/28/technology/startups/facebook-house/index.html\"><img src=\"img/press/Dark/CNN.png\" alt=\"CNN\"></a></li>\n      <li class=\"atlantic\"><a href=\"http://www.theatlantic.com/politics/archive/2012/11/my-best-friend-is-gay-where-social-networks-meets-same-sex-marriage/265793/#\"><img src=\"img/press/Dark/Atlantic.png\" alt=\"The Atlantic\"></a></li>\n      <li class=\"economist\"><a href=\"http://www.economist.com/news/business/21567403-techniques-presidents-election-campaigns-have-spawned-one-lot-young-firms-obama\"><img src=\"img/press/Dark/Economist.png\" alt=\"The Economist\"></a></li>\n      <li class=\"tc\"><a href=\"http://techcrunch.com/2012/11/13/amicus/\"><img src=\"img/press/Dark/TechCrunch.png\" alt=\"TechCrunch\"></a></li>\n      <li class=\"abc\"><a href=\"http://abclocal.go.com/kgo/story?section=news/technology&amp;id=8790249\"><img src=\"img/press/Dark/ABC.png\" alt=\"abc NEWS\"></a></li>\n      <li class=\"buzzfeed\"><a href=\"http://www.buzzfeed.com/rebeccaelliott/7-under-the-hood-technologies-that-are-transformin\"><img src=\"img/press/Dark/BuzzFeed.png\" alt=\"Buzzfeed\"></a></li>\n    </ul>\n</section>\n");
+  data.buffer.push(escapeExpression((helper = helpers['demo-form-component'] || (depth0 && depth0['demo-form-component']),options={hash:{
+    'tagName': ("form"),
+    'classNames': ("demo-form")
+  },hashTypes:{'tagName': "STRING",'classNames': "STRING"},hashContexts:{'tagName': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "demo-form-component", options))));
+  data.buffer.push("\n</div>");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["privacy"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1;
@@ -141,7 +216,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
-Ember.TEMPLATES["terms"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["terms"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1;
