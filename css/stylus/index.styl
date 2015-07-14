@@ -105,7 +105,24 @@ section.features
     li
       width 100%
       padding 1em
-      // height 400px
 
-      // &:nth-of-type(even)
-      //   text-align right
+.footer-demo
+  margin 4em auto
+  width 350px
+  component-shadow()
+
+  p
+    border-radius $radius $radius 0 0
+    margin 0
+    background white
+    text-align center
+    padding 1em
+
+  .footer.demo-form
+    width 100%
+    float none
+    display table
+
+    .submit
+      input
+        border-radius 0 0 $radius $radius

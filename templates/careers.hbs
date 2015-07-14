@@ -6,22 +6,22 @@
     <h2>Why Amicus?</h2>
     <p>Amicus is reshaping civil society{{!--  through innovation --}}. We believe profits and social good can go hand in hand. At Amicus, you can work for a fast growing startup that's disrupting a really large market and feel great about what you do. Nonprofits in the U.S. currently spend $60 billion annually to raise $300 billion — 20 cents on the dollar! We build tools that increase the amount nonprofits raise, while drastically decreasing their costs. Amicus puts more money in the hands of great organizations and creates lots of value in the process. Tired of deciding whether to do good or do well? You've come to the right place.</p>
     <p>Oh, and we're based in New York City*, the Rome of our time.</p>
-    <p>*Not based in NYC? Amicus can fix that.</p>
+    <p class="note">*Not based in NYC? Amicus can fix that.</p>
   </section>
 
   <section class="investors">
     <h2>Our Investors</h2>
     <p>Amicus is backed by an amazing group of investors:</p>
     <ul>
-      <li>Y Combinator</li>
-      <li>Founders Fund</li>
-      <li>Omidyar Network</li>
-      <li>RRE Ventures</li>
-      <li>IA Ventures</li>
-      <li>Quotidian Ventures</li>
-      <li>500 Startups</li>
-      <li>NYC Seed</li>
-      <li>High Peaks Venture Partners</li>
+      <li><a href="http://www.ycombinator.com/"><img id="yc" src="img/investors/yc.png" alt="Y Combinator"></a></li>
+      <li><a href="http://www.foundersfund.com/"><img id="foundersFund" src="img/investors/foundersFund.png" alt="Founders Fund"></a></li>
+      <li><a href="https://www.omidyar.com/"><img id="omidyar" src="img/investors/omidyar.png" alt="Omidyar Network"></a></li>
+      <li><a href="http://www.rre.com/"><img id="rre" src="img/investors/rre.png" alt="RRE Ventures"></a></li>
+      <li><a href="http://www.iaventures.com/"><img id="ia" src="img/investors/ia.png" alt="IA Ventures"></a></li>
+      <li><a href="http://quotidian.co"><img id="qv" src="img/investors/qv.png" alt="Quotidian Ventures"></a></li>
+      <li><a href="http://500.co/"><img id="fivehundred" src="img/investors/500.png" alt="500 Startups"></a></li>
+      <li><a href="http://www.nycseed.com/"><img id="nycSeed" src="img/investors/nycSeed.gif" alt="NYC Seed"></a></li>
+      <li><a href="http://www.hpvp.com/"><img id="highPeaks" src="img/investors/highPeaks.png" alt="High Peaks Venture Partners"></a></li>
       <li>Alexis Ohanian</li>
       <li>Esther Dyson</li>
       <li>Garry Tan</li>
@@ -52,17 +52,21 @@
     </div>
   </section>
 
-  <section>
+  <section class="apply">
     <h2>Apply</h2>
-    <p>Your info (all fields required)</p>
-    <form action="">
-      <input type="text" placeholder="Name (First and last)">
-      <input type="text" placeholder="Current job">
-      <input type="text" placeholder="Email">
-      <input type="text" placeholder="Phone number">
-      <input type="text" placeholder="Github or LinkedIn">
-    </form>
-    <label for="description">Why are you the right candidate?<textarea name="" id="description" cols="30" rows="10"></textarea></label>
-    <button>Submit</button>
+    <div>
+      <p>
+        <b>Your info. <span>(All fields required)</span></b>
+      </p>
+      <form action="">
+        {{input type="text" placeholder="Name (First and last)"}}
+        {{input type="text" placeholder="Current job"}}
+        {{input type="text" placeholder="Email"}}
+        {{input type="text" placeholder="Phone number"}}
+        {{input type="text" placeholder="Github or LinkedIn"}}
+      </form>
+      <label for="description">Why are you the right candidate?<textarea name="" id="description" cols="30" rows="10"></textarea></label>
+      <button class="submit">Submit</button>
+    </div>
   </section>
 </div>

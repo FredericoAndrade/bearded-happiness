@@ -41,10 +41,35 @@ Ember.TEMPLATES["careers"] = Ember.Handlebars.template(function anonymous(Handle
 /**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '';
+  var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<div class=\"background careers\">\n  <h1>We're Hiring!</h1>\n</div>\n<div class=\"careers\">\n  <section>\n    <h2>Why Amicus?</h2>\n    <p>Amicus is reshaping civil society. We believe profits and social good can go hand in hand. At Amicus, you can work for a fast growing startup that's disrupting a really large market and feel great about what you do. Nonprofits in the U.S. currently spend $60 billion annually to raise $300 billion — 20 cents on the dollar! We build tools that increase the amount nonprofits raise, while drastically decreasing their costs. Amicus puts more money in the hands of great organizations and creates lots of value in the process. Tired of deciding whether to do good or do well? You've come to the right place.</p>\n    <p>Oh, and we're based in New York City*, the Rome of our time.</p>\n    <p>*Not based in NYC? Amicus can fix that.</p>\n  </section>\n\n  <section class=\"investors\">\n    <h2>Our Investors</h2>\n    <p>Amicus is backed by an amazing group of investors:</p>\n    <ul>\n      <li>Y Combinator</li>\n      <li>Founders Fund</li>\n      <li>Omidyar Network</li>\n      <li>RRE Ventures</li>\n      <li>IA Ventures</li>\n      <li>Quotidian Ventures</li>\n      <li>500 Startups</li>\n      <li>NYC Seed</li>\n      <li>High Peaks Venture Partners</li>\n      <li>Alexis Ohanian</li>\n      <li>Esther Dyson</li>\n      <li>Garry Tan</li>\n    </ul>\n  </section>\n\n  <section class=\"openings\">\n    <h1>Amicus is hiring</h1>\n    <div>\n      <h2>Senior Developer</h2>\n      <p>About You</p>\n      <ul>\n        <li>You’re a product-centric developer</li>\n        <li>You feel a sense of responsibility over the products you build</li>\n        <li>You take initiative and are comfortable working in uncertainty</li>\n      </ul>\n      <p>Required Skills</p>\n      <ul>\n        <li>Expertise in Rails, Javascript, MongoDB</li>\n        <li>Strong knowledge of AWS ecosystem</li>\n        <li>Proven ability to jump into a new project without much guidance</li>\n      </ul>\n      <p>Required Experience</p>\n      <ul>\n        <li>Experience running multi threaded Rails applications</li>\n        <li>Experience developing and deploying SOA apps</li>\n      </ul>\n    </div>\n  </section>\n\n  <section>\n    <h2>Apply</h2>\n    <p>Your info (all fields required)</p>\n    <form action=\"\">\n      <input type=\"text\" placeholder=\"Name (First and last)\">\n      <input type=\"text\" placeholder=\"Current job\">\n      <input type=\"text\" placeholder=\"Email\">\n      <input type=\"text\" placeholder=\"Phone number\">\n      <input type=\"text\" placeholder=\"Github or LinkedIn\">\n    </form>\n    <label for=\"description\">Why are you the right candidate?<textarea name=\"\" id=\"description\" cols=\"30\" rows=\"10\"></textarea></label>\n    <button>Submit</button>\n  </section>\n</div>");
+  data.buffer.push("<div class=\"background careers\">\n  <h1>We're Hiring!</h1>\n</div>\n<div class=\"careers\">\n  <section>\n    <h2>Why Amicus?</h2>\n    <p>Amicus is reshaping civil society. We believe profits and social good can go hand in hand. At Amicus, you can work for a fast growing startup that's disrupting a really large market and feel great about what you do. Nonprofits in the U.S. currently spend $60 billion annually to raise $300 billion — 20 cents on the dollar! We build tools that increase the amount nonprofits raise, while drastically decreasing their costs. Amicus puts more money in the hands of great organizations and creates lots of value in the process. Tired of deciding whether to do good or do well? You've come to the right place.</p>\n    <p>Oh, and we're based in New York City*, the Rome of our time.</p>\n    <p class=\"note\">*Not based in NYC? Amicus can fix that.</p>\n  </section>\n\n  <section class=\"investors\">\n    <h2>Our Investors</h2>\n    <p>Amicus is backed by an amazing group of investors:</p>\n    <ul>\n      <li><a href=\"http://www.ycombinator.com/\"><img id=\"yc\" src=\"img/investors/yc.png\" alt=\"Y Combinator\"></a></li>\n      <li><a href=\"http://www.foundersfund.com/\"><img id=\"foundersFund\" src=\"img/investors/foundersFund.png\" alt=\"Founders Fund\"></a></li>\n      <li><a href=\"https://www.omidyar.com/\"><img id=\"omidyar\" src=\"img/investors/omidyar.png\" alt=\"Omidyar Network\"></a></li>\n      <li><a href=\"http://www.rre.com/\"><img id=\"rre\" src=\"img/investors/rre.png\" alt=\"RRE Ventures\"></a></li>\n      <li><a href=\"http://www.iaventures.com/\"><img id=\"ia\" src=\"img/investors/ia.png\" alt=\"IA Ventures\"></a></li>\n      <li><a href=\"http://quotidian.co\"><img id=\"qv\" src=\"img/investors/qv.png\" alt=\"Quotidian Ventures\"></a></li>\n      <li><a href=\"http://500.co/\"><img id=\"fivehundred\" src=\"img/investors/500.png\" alt=\"500 Startups\"></a></li>\n      <li><a href=\"http://www.nycseed.com/\"><img id=\"nycSeed\" src=\"img/investors/nycSeed.gif\" alt=\"NYC Seed\"></a></li>\n      <li><a href=\"http://www.hpvp.com/\"><img id=\"highPeaks\" src=\"img/investors/highPeaks.png\" alt=\"High Peaks Venture Partners\"></a></li>\n      <li>Alexis Ohanian</li>\n      <li>Esther Dyson</li>\n      <li>Garry Tan</li>\n    </ul>\n  </section>\n\n  <section class=\"openings\">\n    <h1>Amicus is hiring</h1>\n    <div>\n      <h2>Senior Developer</h2>\n      <p>About You</p>\n      <ul>\n        <li>You’re a product-centric developer</li>\n        <li>You feel a sense of responsibility over the products you build</li>\n        <li>You take initiative and are comfortable working in uncertainty</li>\n      </ul>\n      <p>Required Skills</p>\n      <ul>\n        <li>Expertise in Rails, Javascript, MongoDB</li>\n        <li>Strong knowledge of AWS ecosystem</li>\n        <li>Proven ability to jump into a new project without much guidance</li>\n      </ul>\n      <p>Required Experience</p>\n      <ul>\n        <li>Experience running multi threaded Rails applications</li>\n        <li>Experience developing and deploying SOA apps</li>\n      </ul>\n    </div>\n  </section>\n\n  <section class=\"apply\">\n    <h2>Apply</h2>\n    <div>\n      <p>\n        <b>Your info. <span>(All fields required)</span></b>\n      </p>\n      <form action=\"\">\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'placeholder': ("Name (First and last)")
+  },hashTypes:{'type': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'placeholder': ("Current job")
+  },hashTypes:{'type': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'placeholder': ("Email")
+  },hashTypes:{'type': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'placeholder': ("Phone number")
+  },hashTypes:{'type': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'placeholder': ("Github or LinkedIn")
+  },hashTypes:{'type': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n      </form>\n      <label for=\"description\">Why are you the right candidate?<textarea name=\"\" id=\"description\" cols=\"30\" rows=\"10\"></textarea></label>\n      <button class=\"submit\">Submit</button>\n    </div>\n  </section>\n</div>");
   return buffer;
   
 });
@@ -67,39 +92,39 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("\n  \n  <div class=\"fields\">\n    ");
+  data.buffer.push("<div class=\"fields\">\n  ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
     'name': ("first-name"),
     'class': ("first-name"),
-    'value': ("First Name"),
+    'placeholder': ("First Name"),
     'tabindex': ("1")
-  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n    ");
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'placeholder': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'placeholder': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n  ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
     'name': ("last-name"),
     'class': ("last-name"),
-    'value': ("Last Name"),
+    'placeholder': ("Last Name"),
     'tabindex': ("2")
-  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n    ");
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'placeholder': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'placeholder': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n  ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
     'name': ("organization"),
     'class': ("organization"),
-    'value': ("Organization"),
+    'placeholder': ("Organization"),
     'tabindex': ("3")
-  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n    ");
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'placeholder': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'placeholder': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n  ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
     'name': ("email"),
     'class': ("email"),
-    'value': ("Email"),
+    'placeholder': ("Email"),
     'tabindex': ("4")
-  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'value': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'value': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n    \n    \n  </div>\n  <div class=\"submit\">\n    <input type=\"submit\" value=\"Request a free demo\" />\n  </div>\n");
+  },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'placeholder': "STRING",'tabindex': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'placeholder': depth0,'tabindex': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n</div>\n<div class=\"submit\">\n  <input type=\"submit\" value=\"Submit\" />\n</div>\n");
   return buffer;
   
 });
@@ -124,7 +149,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n    <img src=\"img/logo-blue.png\" alt=\"Amicus\">\n  ");
+  data.buffer.push("\n    <img id=\"lMark\" src=\"img/badger-small.png\" alt=\"\">\n    <img id=\"lType\" src=\"img/logo-blue.png\" alt=\"Amicus\">\n  ");
   }
 
 function program3(depth0,data) {
@@ -188,12 +213,12 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'tagName': ("section"),
     'classNames': ("social-proof")
   },hashTypes:{'tagName': "STRING",'classNames': "STRING"},hashContexts:{'tagName': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "social-proof-component", options))));
-  data.buffer.push("\n</div>\n\n  <section class=\"features\">\n    <h1>Main Features</h1>\n    <ul>\n      <li>One-click calls for intuitive, simple use</li>\n      <li>Distributed call centers</li>\n      <li>Fully branded for your organization</li>\n      <li>Gamified to recognize top volunteers</li>\n    </ul>\n  </section>\n\n<div class=\"content\">\n  \n  <section class=\"press\">\n    <h1>In the news</h1>\n    <ul>\n      <li class=\"bloomberg\"><a href=\"http://www.bloomberg.com/video/democratizing-democracy-shaping-the-election-p20TadhfR5KF18huJT15fQ.html\"><img src=\"img/press/Dark/Bloomberg.png\" alt=\"Bloomberg TV\"></a></li>\n      <li class=\"cnn\"><a href=\"http://money.cnn.com/2012/08/28/technology/startups/facebook-house/index.html\"><img src=\"img/press/Dark/CNN.png\" alt=\"CNN\"></a></li>\n      <li class=\"atlantic\"><a href=\"http://www.theatlantic.com/politics/archive/2012/11/my-best-friend-is-gay-where-social-networks-meets-same-sex-marriage/265793/#\"><img src=\"img/press/Dark/Atlantic.png\" alt=\"The Atlantic\"></a></li>\n      <li class=\"economist\"><a href=\"http://www.economist.com/news/business/21567403-techniques-presidents-election-campaigns-have-spawned-one-lot-young-firms-obama\"><img src=\"img/press/Dark/Economist.png\" alt=\"The Economist\"></a></li>\n      <li class=\"tc\"><a href=\"http://techcrunch.com/2012/11/13/amicus/\"><img src=\"img/press/Dark/TechCrunch.png\" alt=\"TechCrunch\"></a></li>\n      <li class=\"abc\"><a href=\"http://abclocal.go.com/kgo/story?section=news/technology&amp;id=8790249\"><img src=\"img/press/Dark/ABC.png\" alt=\"abc NEWS\"></a></li>\n      <li class=\"buzzfeed\"><a href=\"http://www.buzzfeed.com/rebeccaelliott/7-under-the-hood-technologies-that-are-transformin\"><img src=\"img/press/Dark/BuzzFeed.png\" alt=\"Buzzfeed\"></a></li>\n    </ul>\n</section>\n");
+  data.buffer.push("\n</div>\n\n  <section class=\"features\">\n    <h1>Main Features</h1>\n    <ul>\n      <li>One-click calls for intuitive, simple use</li>\n      <li>Distributed call centers</li>\n      <li>Fully branded for your organization</li>\n      <li>Gamified to recognize top volunteers</li>\n    </ul>\n  </section>\n\n<div class=\"content\">\n  \n  <section class=\"press\">\n    <h1>In the news</h1>\n    <ul>\n      <li class=\"bloomberg\"><a href=\"http://www.bloomberg.com/video/democratizing-democracy-shaping-the-election-p20TadhfR5KF18huJT15fQ.html\"><img src=\"img/press/Dark/Bloomberg.png\" alt=\"Bloomberg TV\"></a></li>\n      <li class=\"cnn\"><a href=\"http://money.cnn.com/2012/08/28/technology/startups/facebook-house/index.html\"><img src=\"img/press/Dark/CNN.png\" alt=\"CNN\"></a></li>\n      <li class=\"atlantic\"><a href=\"http://www.theatlantic.com/politics/archive/2012/11/my-best-friend-is-gay-where-social-networks-meets-same-sex-marriage/265793/#\"><img src=\"img/press/Dark/Atlantic.png\" alt=\"The Atlantic\"></a></li>\n      <li class=\"economist\"><a href=\"http://www.economist.com/news/business/21567403-techniques-presidents-election-campaigns-have-spawned-one-lot-young-firms-obama\"><img src=\"img/press/Dark/Economist.png\" alt=\"The Economist\"></a></li>\n      <li class=\"tc\"><a href=\"http://techcrunch.com/2012/11/13/amicus/\"><img src=\"img/press/Dark/TechCrunch.png\" alt=\"TechCrunch\"></a></li>\n      <li class=\"abc\"><a href=\"http://abclocal.go.com/kgo/story?section=news/technology&amp;id=8790249\"><img src=\"img/press/Dark/ABC.png\" alt=\"abc NEWS\"></a></li>\n      <li class=\"buzzfeed\"><a href=\"http://www.buzzfeed.com/rebeccaelliott/7-under-the-hood-technologies-that-are-transformin\"><img src=\"img/press/Dark/BuzzFeed.png\" alt=\"Buzzfeed\"></a></li>\n    </ul>\n</section>\n<section class=\"footer-demo\">\n  <div>\n    <p>\n      <b>Request a free demo</b>\n    </p>\n    ");
   data.buffer.push(escapeExpression((helper = helpers['demo-form-component'] || (depth0 && depth0['demo-form-component']),options={hash:{
     'tagName': ("form"),
-    'classNames': ("demo-form")
+    'classNames': ("footer demo-form")
   },hashTypes:{'tagName': "STRING",'classNames': "STRING"},hashContexts:{'tagName': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "demo-form-component", options))));
-  data.buffer.push("\n</div>");
+  data.buffer.push("\n  </div>\n</section>\n</div>");
   return buffer;
   
 });
