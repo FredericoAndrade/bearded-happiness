@@ -1,20 +1,21 @@
 .banner
   width 100%
   overflow hidden
-  background $light-blue
+  background linear-gradient(-45deg, lighten(#8ABFE6, 40%),  #8ABFE6)
   margin-bottom 4em
   position relative
-  background-image url("../img/3.jpg")
-  background-size cover
 
   img
-    display none
-    width 72%
     position absolute
-    z-index  0
-    margin-top -10%
+    left -80px
+    width 80%
+    min-width 1024px
+    z-index 0
+    bottom -5px
 
   section
+    position relative
+    z-index 10
     width 100%
     margin 5% 0
     float left
@@ -22,6 +23,10 @@
     h1, h2
       white-text()
       text-align left
+      text-shadow 0 3px 7px rgba(63, 116, 157,0.3)
+      background-color rgba(139,191,230,0.1)
+      box-shadow 0 0 50px 20px rgba(139,191,230,0.1)
+      rgba(139,191,230,1)
 
     h1
       text-align center
@@ -41,7 +46,7 @@
     width 28%
     float right
     position relative
-    margin 0 5% 5% 5%
+    margin 0 5% 200px 5%
     component-shadow()
 
     .fields

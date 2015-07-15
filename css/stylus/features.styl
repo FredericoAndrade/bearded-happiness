@@ -32,15 +32,17 @@
 
     &.container
       ul
+        display inline-block
         list-style-type none
         margin-top 0
         margin-bottom 10em
 
         li
-          // height 600px
           text-align center
           background lighten($light-blue, 30%)
-          padding 370px 0 370px
+          // padding 340px 0 0
+          width 100%
+          float left
 
           span
             margin 2em auto
@@ -52,13 +54,13 @@
           &:nth-of-type(even)
             background initial
 
-          &:nth-of-type(1)
-            padding-bottom 310px
+          &.click
+            // padding-bottom 310px
 
-            span
-              padding 4em 5em
-              background #fff
-              component-shadow()
+            // span
+            //   padding 4em 5em
+            //   background #fff
+            //   component-shadow()
 
               a
                 font-size 16px
@@ -73,8 +75,34 @@
                 &:hover
                   background #85c745
 
+            div
+              &.icons
+                margin 200px auto 0
+                display inline-block
+
+                p
+                  color #BFDCF1
+                  font-weight 300
+                  font-size 9em
+                  margin 0
+                  float left
+
+                img
+                  // position relative
+                  // z-index 1
+                  margin -110px -170px
+                  // display block
+                  float left
+                  height 500px
+
+              &.copy
+                margin-bottom 200px
+                // top -340px
+                // position relative
+                // z-index 10
+
           &:nth-of-type(2)
-            padding-bottom 310px
+            // padding-bottom 310px
 
             span
               padding 4em 5em
@@ -94,7 +122,7 @@
                   color #4e8fb3
 
           &:nth-of-type(3)
-            padding-bottom 310px
+            // padding-bottom 310px
 
             span
               component-shadow()
@@ -126,6 +154,16 @@
 
                     input
                       margin-right 1em
+
+          span.next
+            margin 0 //10em 0 0 0
+            padding 4em 5em
+            box-shadow none
+            color darken($light-blue, 10%)
+            background transparent
+            border none
+            width 100%
+            display block
 
 .features.footer-demo
   max-width 350px
