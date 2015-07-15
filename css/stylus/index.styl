@@ -94,22 +94,44 @@ section.features
     white-text()
     margin 1em auto
 
-  h1, ul
+  h1
     width 960px
 
   ul
+    width 100%
     margin auto
     list-style-type none
-    padding-bottom 3em
+    padding 0 3em
+    display table
 
     li
-      width 100%
-      padding 1em
+      width 25%
+      padding 0
+      float left
+      text-align center
+
+      a
+        width 100%
+        padding 2em 2em 4em 2em
+        display inline-block
+        color darken($light-blue, 30%)
+
+        &:hover
+          color darken($light-blue, 45%)
+          background lighten($light-blue,40%)
+
+        img
+          height 130px
+          display block
+          margin 1em auto
 
 .footer-demo
   margin 4em auto
   width 350px
   component-shadow()
+
+  div
+    display table
 
   p
     border-radius $radius $radius 0 0

@@ -4,104 +4,131 @@
     float left
     display block
 
-    ul
-      list-style-type none
-      margin-top 0
-      margin-bottom 3em
+    // &.counter
+    //   position fixed
+    //   top 40%
+    //   right 10px
+    //   z-index 10
+    //   width 20px
+    //   height 140px
 
-      li
-        // height 600px
-        text-align center
-        background lighten($light-blue, 30%)
-        padding 200px 0 200px
+    //   ul
+    //     display inline-block
+    //     li
+    //       padding 0 0 0 0 !important
+    //       margin 0
+    //       display block
+    //       border-radius 100%
+    //       margin 5px
+    //       border 1px solid darken($light-blue,10%)
+    //       height 10px
+    //       width 10px
 
-        span
-          margin 2em auto
-          display inline-block
+    //       &.active
+    //         background darken($light-blue,10%)
 
-        p
-          margin-left 0
+    //       &:nth-of-type(even)
+    //         background transparent
 
-        &:nth-of-type(even)
-          background initial
+    &.container
+      ul
+        list-style-type none
+        margin-top 0
+        margin-bottom 10em
 
-        &:nth-of-type(1)
-          padding-bottom 50px
-
-          span
-            padding 4em 5em
-            background #fff
-            component-shadow()
-
-            a
-              font-size 16px
-              padding .8em 1.5em
-              background #94ce5c
-              border 1px solid #94ce5c
-              color white
-              border-radius 1.5*$radius
-              cursor pointer
-              font-weight 400
-
-              &:hover
-                background #85c745
-
-        &:nth-of-type(2)
-          padding-bottom 50px
+        li
+          // height 600px
+          text-align center
+          background lighten($light-blue, 30%)
+          padding 370px 0 370px
 
           span
-            padding 4em 5em
-            background #fff
-            component-shadow()
+            margin 2em auto
+            display inline-block
 
-            a
-              padding .8em 1.5em
-              background #F9F8DE
-              border 1px solid #cece28
-              color #62b3e0
-              font-size 16px
-              cursor pointer
-              font-weight 400
+          p
+            margin-left 0
 
-              &:hover
-                color #4e8fb3
+          &:nth-of-type(even)
+            background initial
 
-        &:nth-of-type(3)
-          padding-bottom 50px
+          &:nth-of-type(1)
+            padding-bottom 310px
 
-          span
-            component-shadow()
-            background #F3F6F8
-            padding 1em
-
-            p
-              margin-top 0
-              text-align left
-
-            form
+            span
+              padding 4em 5em
               background #fff
+              component-shadow()
 
-              fieldset
-                border none
-                padding 0
-                margin 0
+              a
+                font-size 16px
+                padding .8em 1.5em
+                background #94ce5c
+                border 1px solid #94ce5c
+                color white
+                border-radius 1.5*$radius
+                cursor pointer
+                font-weight 400
 
-                label
-                  padding 1em
-                  text-align left
-                  display block
-                  border 1px solid transparent
+                &:hover
+                  background #85c745
 
-                  &:hover
-                    background lighten(#F3F6F8, 60%)
-                    cursor pointer
-                    border-color darken(#F3F6F8, 3%)
+          &:nth-of-type(2)
+            padding-bottom 310px
 
-                  input
-                    margin-right 1em
+            span
+              padding 4em 5em
+              background #fff
+              component-shadow()
+
+              a
+                padding .8em 1.5em
+                background #F9F8DE
+                border 1px solid #cece28
+                color #62b3e0
+                font-size 16px
+                cursor pointer
+                font-weight 400
+
+                &:hover
+                  color #4e8fb3
+
+          &:nth-of-type(3)
+            padding-bottom 310px
+
+            span
+              component-shadow()
+              background #F3F6F8
+              padding 1em
+
+              p
+                margin-top 0
+                text-align left
+
+              form
+                background #fff
+
+                fieldset
+                  border none
+                  padding 0
+                  margin 0
+
+                  label
+                    padding 1em
+                    text-align left
+                    display block
+                    border 1px solid transparent
+
+                    &:hover
+                      background lighten(#F3F6F8, 60%)
+                      cursor pointer
+                      border-color darken(#F3F6F8, 3%)
+
+                    input
+                      margin-right 1em
 
 .features.footer-demo
   max-width 350px
-  margin 3em auto
+  margin 10em auto
   display table
   float none
