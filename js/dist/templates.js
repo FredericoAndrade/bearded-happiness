@@ -127,7 +127,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'class': ("email"),
     'placeholder': ("Email")
   },hashTypes:{'type': "STRING",'name': "STRING",'class': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'name': depth0,'class': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n</div>\n<div class=\"submit\">\n  <input type=\"submit\" ");
+  data.buffer.push("\n</div>\n<div class=\"submit\">\n  <input class=\"submit-button\" type=\"submit\" ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'value': ("call-to-action")
   },hashTypes:{'value': "STRING"},hashContexts:{'value': depth0},contexts:[],types:[],data:data})));
@@ -213,8 +213,31 @@ Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handleba
 /**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
+function program1(depth0,data) {
+  
+  
+  data.buffer.push("<img src=\"img/icons/icons_click.svg\" alt=\"\">One-click calls");
+  }
+
+function program3(depth0,data) {
+  
+  
+  data.buffer.push("<img src=\"img/icons/icons_distributed.svg\" alt=\"\">Distributed call centers");
+  }
+
+function program5(depth0,data) {
+  
+  
+  data.buffer.push("<img src=\"img/icons/icons_brand.svg\" alt=\"\">Fully branded");
+  }
+
+function program7(depth0,data) {
+  
+  
+  data.buffer.push("<img src=\"img/icons/icons_gamified.svg\" alt=\"\">Built-in Leaderboards");
+  }
 
   data.buffer.push("<div class=\"banner\">\n  <img src=\"img/features/callPage.png\" alt=\"\">\n  <section>\n    <div class=\"content\">\n      <h1>The World's Best Peer to Peer Call Tool.</h1>\n      <h2>Powering People Power</h2>\n    </div>\n  </section>\n  ");
   data.buffer.push(escapeExpression((helper = helpers['demo-form-component'] || (depth0 && depth0['demo-form-component']),options={hash:{
@@ -227,7 +250,19 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'tagName': ("section"),
     'classNames': ("social-proof")
   },hashTypes:{'tagName': "STRING",'classNames': "STRING"},hashContexts:{'tagName': depth0,'classNames': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "social-proof-component", options))));
-  data.buffer.push("\n</div>\n\n  <section class=\"features\">\n    <h1>Main Features</h1>\n    <ul>\n      <li><a href=\"#\"><img src=\"img/icons/icons_click.svg\" alt=\"\">One-click calls</a></li>\n      <li><a href=\"#\"><img src=\"img/icons/icons_distributed.svg\" alt=\"\">Distributed call centers</a></li>\n      <li><a href=\"#\"><img src=\"img/icons/icons_brand.svg\" alt=\"\">Fully branded</a></li>\n      <li><a href=\"#\"><img src=\"img/icons/icons_gamified.svg\" alt=\"\">Built-in Leaderboards</a></li>\n    </ul>\n  </section>\n\n<div class=\"content\">\n  \n  <section class=\"press\">\n    <h1>In the news</h1>\n    <ul>\n      <li class=\"bloomberg\"><a href=\"http://www.bloomberg.com/video/democratizing-democracy-shaping-the-election-p20TadhfR5KF18huJT15fQ.html\"><img src=\"img/press/Bloomberg.png\" alt=\"Bloomberg TV\"></a></li>\n      <li class=\"cnn\"><a href=\"http://money.cnn.com/2012/08/28/technology/startups/facebook-house/index.html\"><img src=\"img/press/CNN.png\" alt=\"CNN\"></a></li>\n      <li class=\"atlantic\"><a href=\"http://www.theatlantic.com/politics/archive/2012/11/my-best-friend-is-gay-where-social-networks-meets-same-sex-marriage/265793/#\"><img src=\"img/press/Atlantic.png\" alt=\"The Atlantic\"></a></li>\n      <li class=\"economist\"><a href=\"http://www.economist.com/news/business/21567403-techniques-presidents-election-campaigns-have-spawned-one-lot-young-firms-obama\"><img src=\"img/press/Economist.png\" alt=\"The Economist\"></a></li>\n      <li class=\"tc\"><a href=\"http://techcrunch.com/2012/11/13/amicus/\"><img src=\"img/press/TechCrunch.png\" alt=\"TechCrunch\"></a></li>\n      <li class=\"abc\"><a href=\"http://abclocal.go.com/kgo/story?section=news/technology&amp;id=8790249\"><img src=\"img/press/ABC.png\" alt=\"abc NEWS\"></a></li>\n      <li class=\"buzzfeed\"><a href=\"http://www.buzzfeed.com/rebeccaelliott/7-under-the-hood-technologies-that-are-transformin\"><img src=\"img/press/BuzzFeed.png\" alt=\"Buzzfeed\"></a></li>\n    </ul>\n</section>\n<section class=\"footer-demo\">\n  <div>\n    <p>\n      <b>Request a free demo</b>\n    </p>\n    ");
+  data.buffer.push("\n</div>\n\n  <section class=\"features\">\n    <h1>Main Features</h1>\n    <ul>\n      <li>");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "features", options) : helperMissing.call(depth0, "link-to", "features", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</li>\n      <li>");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "features", options) : helperMissing.call(depth0, "link-to", "features", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</li>\n      <li>");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "features", options) : helperMissing.call(depth0, "link-to", "features", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</li>\n      <li>");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "features", options) : helperMissing.call(depth0, "link-to", "features", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</li>\n    </ul>\n  </section>\n\n<div class=\"content\">\n  \n  <section class=\"press\">\n    <h1>In the news</h1>\n    <ul>\n      <li class=\"bloomberg\"><a href=\"http://www.bloomberg.com/video/democratizing-democracy-shaping-the-election-p20TadhfR5KF18huJT15fQ.html\"><img src=\"img/press/Bloomberg.png\" alt=\"Bloomberg TV\"></a></li>\n      <li class=\"cnn\"><a href=\"http://money.cnn.com/2012/08/28/technology/startups/facebook-house/index.html\"><img src=\"img/press/CNN.png\" alt=\"CNN\"></a></li>\n      <li class=\"atlantic\"><a href=\"http://www.theatlantic.com/politics/archive/2012/11/my-best-friend-is-gay-where-social-networks-meets-same-sex-marriage/265793/#\"><img src=\"img/press/Atlantic.png\" alt=\"The Atlantic\"></a></li>\n      <li class=\"economist\"><a href=\"http://www.economist.com/news/business/21567403-techniques-presidents-election-campaigns-have-spawned-one-lot-young-firms-obama\"><img src=\"img/press/Economist.png\" alt=\"The Economist\"></a></li>\n      <li class=\"tc\"><a href=\"http://techcrunch.com/2012/11/13/amicus/\"><img src=\"img/press/TechCrunch.png\" alt=\"TechCrunch\"></a></li>\n      <li class=\"abc\"><a href=\"http://abclocal.go.com/kgo/story?section=news/technology&amp;id=8790249\"><img src=\"img/press/ABC.png\" alt=\"abc NEWS\"></a></li>\n      <li class=\"buzzfeed\"><a href=\"http://www.buzzfeed.com/rebeccaelliott/7-under-the-hood-technologies-that-are-transformin\"><img src=\"img/press/BuzzFeed.png\" alt=\"Buzzfeed\"></a></li>\n    </ul>\n</section>\n<section class=\"footer-demo\">\n  <div>\n    <p>\n      <b>Request a free demo</b>\n    </p>\n    ");
   data.buffer.push(escapeExpression((helper = helpers['demo-form-component'] || (depth0 && depth0['demo-form-component']),options={hash:{
     'tagName': ("form"),
     'classNames': ("footer demo-form"),
